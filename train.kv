@@ -1,0 +1,36 @@
+<CustButton@Button>:
+    font_size: 32
+    color: 0,0,0,1
+
+    background_normal: 'but1.png'
+    background_down: 'but3.png' 
+
+
+<TrainGridLayout>:
+    id: main
+    rows: 5
+    padding: 100
+    spacing: 20
+    orientation: 'horizontal'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'but2.png'
+
+    BoxLayout:
+        spacing: 10
+        CustButton:
+            text: "Play Saved"  
+            
+
+    BoxLayout:
+        spacing: 10
+        CustButton:
+            text: "Make Training"
+            
+    BoxLayout:
+        spacing: 10
+        CustButton:
+            text: "Quit"
+            
